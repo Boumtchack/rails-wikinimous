@@ -1,1 +1,10 @@
-<h1>COUCOU</h1>
+<div class="container-index d-flex">
+<ul>
+<% @articles.each do |article| %>
+<li>
+  <div class="title"><%= link_to article.title, "articles/#{article.id}" %></div>
+  <div class="content"><%= article.content %></div>
+  </li>
+<% end %>
+</ul>
+</div>
